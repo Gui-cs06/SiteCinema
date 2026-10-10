@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --light-background-color: #f8f9fa;
+    --dark-background-color: #0d1117;
+    --primary-color: #0061F2;
+    --primary-color-hover: #004BBB;
+    --light-card-bg: #ffffff;
+    --dark-card-bg: #1e1e1e;
+    --light-text: #000000;
+    --dark-text: #ffffff;
+    --secondary-text-light: #555555;
+    --secondary-text-dark: #c4c4c4;
+    --form-scrollbar-thumb-light: #a0a0a0;
+    --form-scrollbar-thumb-dark: #555;
+    --form-scrollbar-track-light: #e0e0e0;
+    --form-scrollbar-track-dark: #333;
+}
+
+/* ===== Reset geral ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body.light {
+    background-color: var(--light-background-color);
+    color: var(--light-text);
+}
+
+body.dark {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text);
+}
+
+/* ===== Navbar ===== */
+nav {
+    height: 80px;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    --bs-navbar-padding-x: 4rem !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    background-color: var(--light-card-bg);
+    transition: background-color 0.3s;
+}
+
+nav .container-fluid {
+    display: flex;
+    
+}
+
+body.dark .navbar {
+    background-color: var(--dark-card-bg);
+}
+
+.navbar-brand,
+.navbar-brand img {
+    height: 80px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+body.light .navbar-nav .nav-link {
+    color: var(--light-text);
+}
+
+body.dark .navbar-nav .nav-link {
+    color: var(--dark-text);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    background-color: inherit;
+    color: inherit;
+}
+
+/* ===== Botão de alternar tema ===== */
+#toggle-theme-btn {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin: 0px 10px;
+    bottom: 80px;
+    right: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-theme {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+#form {
+    background-color: var(--light-card-bg);
+    width: 35vw;
+    min-width: 400px;
+    height: 60vh;
+    min-height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+#form-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+body.dark #form {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#form::-webkit-scrollbar {
+    width: 5px;
+}
+
+#form::-webkit-scrollbar-track {
+    background: var(--form-scrollbar-track-light);
+}
+
+body.dark #form::-webkit-scrollbar-track {
+    background: var(--form-scrollbar-track-dark);
+}
+
+#form::-webkit-scrollbar-thumb {
+    background-color: var(--form-scrollbar-thumb-light);
+    border-radius: 20px;
+}
+
+body.dark #form::-webkit-scrollbar-thumb {
+    background-color: var(--form-scrollbar-thumb-dark);
+}
+
+#container-login {
+    margin: 0px 40px;
+}
+
+#login-head {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--light-text);
+}
+
+body.dark label {
+    color: var(--dark-text);
+}
+
+.credenciais.form-control {
+    margin: 5px 0 15px 0;
+    border-radius: 8px;
+    height: 45px;
+    padding: 10px 15px;
+    background-color: var(--light-card-bg);
+    border: 1px solid var(--input-border-light);
+    color: var(--light-text);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.credenciais:focus {
+    outline: none !important;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 97, 242, 0.2);
+}
+
+body.dark .credenciais {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: var(--dark-text);
+}
+
+body.dark .credenciais::placeholder {
+    color: #ffffffaa;
+}
+
+body.light .credenciais::placeholder {
+    color: #000000aa;
+}
+
+.validado-invalido {
+    border-color: #F44336 !important;
+    background-color: #f8d7da !important;
+}
+
+.validado-valido {
+    border-color: #4CAF50 !important;
+    background-color: #e8f5e9 !important;
+}
+
+#enviar {
+    padding: 0;
+    width: 100%;
+    max-width: 200px;
+    margin: 25px auto 0 auto;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(270deg, #3a7bd5, #00d2ff);
+    color: white;
+    transition: all 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#enviar:hover {
+    background: linear-gradient(270deg, #00d2ff, #3a7bd5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
+}
+
+#enviar:active {
+    transform: translateY(0);
+}
+
+#lembrar {
+    cursor: pointer;
+}
+
+#login-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#login-footer span {
+    color: var(--secondary-text-light);
+}
+
+body.dark #login-footer span {
+    color: var(--secondary-text-dark);
+}
+
+a {
+    text-decoration: none;
+    color: #3a7bd5;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+body.dark a {
+    color: #00d2ff;
+}
+
+a:hover {
+    color: #0061F2;
+    text-decoration: underline;
+}
+
+body.dark a:hover {
+    color: #3a7bd5;
+}
+

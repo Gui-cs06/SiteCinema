@@ -1,0 +1,134 @@
+:root {
+    --light-background-color: #f8f9fa;
+    --dark-background-color: #0d1117;
+    --primary-color: #0061F2;
+    --primary-color-hover: #004BBB;
+    --light-card-bg: #ffffff;
+    --dark-card-bg: #1e1e1e;
+    --light-text: #000000;
+    --dark-text: #ffffff;
+    --secondary-text-light: #555555;
+    --secondary-text-dark: #c4c4c4;
+}
+
+/* ===== Reset geral ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ===== Temas ===== */
+body.light {
+    background-color: var(--light-background-color);
+    color: var(--light-text);
+}
+
+body.dark {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text);
+}
+
+/* ===== Navbar ===== */
+nav {
+    height: 80px;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    --bs-navbar-padding-x: 4rem !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    background-color: var(--light-card-bg);
+    transition: background-color 0.3s;
+}
+
+nav .container-fluid {
+    display: flex;
+    
+}
+
+body.dark .navbar {
+    background-color: var(--dark-card-bg);
+}
+
+.navbar-brand,
+.navbar-brand img {
+    height: 80px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+body.light .navbar-nav .nav-link {
+    color: var(--light-text);
+}
+
+body.dark .navbar-nav .nav-link {
+    color: var(--dark-text);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+section {
+    margin: 3vh 1.5vw 0 1.5vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid .2vw gray;
+    border-radius: 1vw;
+}
+
+section .pSobre {
+    width: 50vw;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light footer {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+body.dark footer {
+    background-color: #333;
+    color: #fff;
+}
+
+/* ===== Botão de alternar tema ===== */
+#toggle-theme-btn {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin: 0px 10px;
+    bottom: 80px;
+    right: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-theme {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</head>
+
+<!-- Modal de Trailer -->
+<div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="trailerModalLabel">Título do Filme</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="ratio ratio-16x9">
+          <iframe id="trailerVideo" src="" title="Trailer" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<body class="light">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <div class="logo">
+                <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt=""></a>
+            </div>
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="index.html">INÍCIO</a>
+                <a class="nav-link" href="paginas/sobre.html">SOBRE NÓS</a>
+            </div>
+            <div class="pesquisa">
+                <div class="input-group">
+                    <span class="input-group-text bg-white border-end-0">
+                        <i class="fas fa-search text-muted"></i>
+                    </span>
+                    <input type="text" id="barraPesquisa" class="form-control border-start-0">
+                </div>
+            </div>
+            <div class="navbar-login">
+                <a id="btnSessao" class="btn btn-primary" href="paginas/login.html">ENTRAR</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="listaFilmes">
+        <div class="filme">
+            <img src="img/operacaoVinganca.jpg" alt="">
+            <p class="generoFilme">AÇÃO - 123 MIN</p>
+            <h3 class="tituloFilme">Operação Vingança</h3>
+            <div class="botoes">
+                <a class="btn btn-primary" href="paginas/filme.html?filme=operacaoVinganca">
+                    Saiba Mais
+                </a>
+                <a class="btn btn-primary btn-trailer" 
+                href="#" 
+                data-bs-toggle="modal" 
+                data-bs-target="#trailerModal" 
+                data-title="Operação Vingança" 
+                data-video="https://www.youtube.com/embed/y3YWAXJKPes?si=y86_Ms9pcXZsXnTp">
+                Trailer
+                </a>
+            </div>
+        </div>
+        <div class="filme">
+            <img src="img/dropAmeacaAnonima.jpg" alt="">
+            <p class="generoFilme">AÇÃO - 85 MIN</p>
+            <h3 class="tituloFilme">Drop: Ameaça Anônima</h3>
+            <div class="botoes">
+                <a class="btn btn-primary" href="paginas/filme.html?filme=dropAmeacaAnonima">
+                    Saiba Mais
+                </a>
+                <a class="btn btn-primary btn-trailer" 
+                href="#" 
+                data-bs-toggle="modal" 
+                data-bs-target="#trailerModal" 
+                data-title="Drop: Ameaça Anônima" 
+                data-video="https://www.youtube.com/embed/dv-XeNIFvNA?si=c8zA20RLMJbRwyct">
+                Trailer
+                </a>
+            </div>
+        </div>
+        <div class="filme">
+            <img src="img/brancaDeNeve.jpg" alt="">
+            <p class="generoFilme">AVENTURA - 109 MIN</p>
+            <h3 class="tituloFilme">Branca de Neve</h3>
+            <div class="botoes">
+                <a class="btn btn-primary" href="paginas/filme.html?filme=brancaDeNeve">
+                    Saiba Mais
+                </a>
+                <a class="btn btn-primary btn-trailer" 
+                href="#" 
+                data-bs-toggle="modal" 
+                data-bs-target="#trailerModal" 
+                data-title="Branca de Neve" 
+                data-video="https://www.youtube.com/embed/X3o9GyKda1k?si=KLXh9nA4wl7O-NZ1">
+                Trailer
+                </a>
+            </div>
+        </div>
+        <div class="filme">
+            <img src="img/theChosenUltimaCeia.jpg" alt="">
+            <p class="generoFilme">DRAMA - 98 MIN</p>
+            <h3 class="tituloFilme">The Chosen - Última Ceia</h3>
+            <div class="botoes">
+                <a class="btn btn-primary" href="paginas/filme.html?filme=theChosenUltimaCeia">
+                    Saiba Mais
+                </a>
+                <a class="btn btn-primary btn-trailer" 
+                href="#" 
+                data-bs-toggle="modal" 
+                data-bs-target="#trailerModal" 
+                data-title="The Chosen - Última Ceia" 
+                data-video="https://www.youtube.com/embed/o519C3i0Jng?si=Ya9u-7YmFq5dsYBt">
+                Trailer
+                </a>
+            </div>
+        </div>
+        <div class="filme">
+            <img src="img/umFilmeMinecraft.jpg" alt="">
+            <p class="generoFilme">AÇÃO - 120 MIN</p>
+            <h3 class="tituloFilme">Um Filme Minecraft</h3>
+            <div class="botoes">
+                <a class="btn btn-primary" href="paginas/filme.html?filme=umFilmeMinecraft">
+                    Saiba Mais
+                </a>
+                <a class="btn btn-primary btn-trailer" 
+                href="#" 
+                data-bs-toggle="modal" 
+                data-bs-target="#trailerModal" 
+                data-title="Um Filme Minecraft" 
+                data-video="https://www.youtube.com/embed/3IVPHxs4NoM?si=ByHmcNDvFjlYY84a">
+                Trailer
+                </a>
+            </div>
+        </div>
+        <div class="filme">
+            <img src="img/codigoAlarum.jpg" alt="">
+            <p class="generoFilme">AÇÃO - 95 MIN</p>
+            <h3 class="tituloFilme">Código Alarum</h3>
+            <div class="botoes">
+                <a class="btn btn-primary" href="paginas/filme.html?filme=codigoAlarum">
+                    Saiba Mais
+                </a>
+                <a class="btn btn-primary btn-trailer" 
+                href="#" 
+                data-bs-toggle="modal" 
+                data-bs-target="#trailerModal" 
+                data-title="Código Alarum" 
+                data-video="https://www.youtube.com/embed/bnjaf3slscs?si=5Nra099O34oi7QaP">
+                Trailer
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="toggle-theme-btn">
+        <img class="toggle-theme" style="width: 30px;" src="img/DARK_MODE.png">
+    </div>
+
+    <footer>
+        <p>&#169 2025 Cinema </p>
+        <p>contato@cinema.com.br</p>
+        <p>Desenvolvido por GRRD</p>
+    </footer>
+
+    <script>
+        const toggleThemeBtn = document.querySelector('.toggle-theme');
+        const body = document.body;
+        const barraPesquisa = document.getElementById('barraPesquisa');
+        const filmes = document.querySelectorAll('.filme');
+        const trailerModal = document.getElementById('trailerModal');
+        const trailerTitle = document.getElementById('trailerModalLabel');
+        const trailerVideo = document.getElementById('trailerVideo');
+
+        document.querySelectorAll('.btn-trailer').forEach(button => {
+            button.addEventListener('click', () => {
+                const title = button.getAttribute('data-title');
+                const video = button.getAttribute('data-video');
+
+                trailerTitle.textContent = title;
+                trailerVideo.src = video + '?autoplay=1';
+            });
+        });
+
+        trailerModal.addEventListener('hidden.bs.modal', () => {
+            trailerVideo.src = '';
+        });
+
+        barraPesquisa.addEventListener('input', () => {
+            const termo = barraPesquisa.value.toLowerCase();
+
+            filmes.forEach(filme => {
+                const titulo = filme.querySelector('.tituloFilme').textContent.toLowerCase();
+                filme.style.display = titulo.includes(termo) ? 'block' : 'none';
+            });
+        });
+
+        const temaSalvo = localStorage.getItem('tema');
+        if (temaSalvo) {
+            body.classList.add(temaSalvo);
+        } else {
+            body.classList.add('light');
+        }
+
+        const updateImage = () => {
+            if (localStorage.getItem('tema') == 'light') {
+                toggleThemeBtn.src = 'img/DARK_MODE.png';
+            } else {
+                toggleThemeBtn.src = 'img/Light_Mode.png';
+            }
+        };
+
+
+        toggleThemeBtn.addEventListener('click', function () {
+            if (body.classList.contains('dark')) {
+                body.classList.remove('dark');
+                body.classList.add('light');
+                localStorage.setItem('tema', 'light');
+            } else {
+                body.classList.remove('light');
+                body.classList.add('dark');
+                localStorage.setItem('tema', 'dark');
+            }
+
+            updateImage();
+        });
+
+        updateImage();
+    </script>
+
+    <script src="script/sessaoAtiva.js"></script>
+</body>
+
+</html>

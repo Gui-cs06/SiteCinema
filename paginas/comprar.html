@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Página Inicial</title>
+    <link rel="stylesheet" href="../css/style_comprar.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="light">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <div class="logo">
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo.jpg" alt=""></a>
+            </div>
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="../index.html">INÍCIO</a>
+                <a class="nav-link" href="sobre.html">SOBRE NÓS</a>
+            </div>
+            <div class="pesquisa">
+                <div class="input-group">
+                    <span class="input-group-text bg-white border-end-0">
+                        <i class="fas fa-search text-muted"></i>
+                    </span>
+                    <input type="text" id="barraPesquisa" class="form-control border-start-0">
+                </div>
+            </div>
+            <div class="navbar-login">
+                <a id="btnSessao" class="btn btn-primary" href="login.html">ENTRAR</a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <h2 id="nomeFilme" class="titulo">Batman</h2>
+        <p id="generoEDuracao" class="informacao">AÇÃO - 95 min</p>
+        <hr>
+        <div id="divFilme">
+            <div id="divImagem">
+                <img id="imgFilme" src="../img/batman.jpg" alt="">
+            </div>
+
+            <form id="formCompra">
+                <input type="hidden" value="compra" name="compra" id="compra">
+                <label class="titulo">Escolha o Horário:</label> <br>
+                <button type="button" class="sessao">16:00 Sala 1</button>
+                <button type="button" class="sessao">17:30 Sala 2</button>
+                <button type="button" class="sessao">18:20 Sala 1</button> <br>
+                <button type="button" class="sessao">19:50 Sala 3</button>
+                <button type="button" class="sessao">20:40 Sala 2</button>
+                <button type="button" class="sessao">21:30 Sala 3</button> <br>
+                <label class="titulo" for="numIngressos">Escolha o número de ingressos:</label> <br>
+                <input type="number" min="0" max="50" name="numIngressos" id="numIngressos"> <br>
+                <label class="titulo">Selecionar Assento:</label> <br>
+
+                <div class="grid-assentos">
+
+                    <button id="btn1" class="assento" type="button">01</button>
+                    <button id="btn2" class="assento" type="button">02</button>
+                    <button id="btn3" class="assento" type="button">03</button>
+                    <button id="btn4" class="assento" type="button">04</button>
+                    <button id="btn5" class="assento" type="button">05</button>
+                    <button id="btn6" class="assento" type="button">06</button>
+                    <button id="btn7" class="assento" type="button">07</button>
+                    <button id="btn8" class="assento" type="button">08</button>
+                    <button id="btn9" class="assento" type="button">09</button>
+                    <button id="btn10" class="assento" type="button">10</button>
+                    <button id="btn11" class="assento" type="button">11</button>
+                    <button id="btn12" class="assento" type="button">12</button>
+                    <button id="btn13" class="assento" type="button">13</button>
+                    <button id="btn14" class="assento" type="button">14</button>
+                    <button id="btn15" class="assento" type="button">15</button>
+                    <button id="btn16" class="assento" type="button">16</button>
+                    <button id="btn17" class="assento" type="button">17</button>
+                    <button id="btn18" class="assento" type="button">18</button>
+                    <button id="btn19" class="assento" type="button">19</button>
+                    <button id="btn20" class="assento" type="button">20</button>
+                    <button id="btn21" class="assento" type="button">21</button>
+                    <button id="btn22" class="assento" type="button">22</button>
+                    <button id="btn23" class="assento" type="button">23</button>
+                    <button id="btn24" class="assento" type="button">24</button>
+                    <button id="btn25" class="assento" type="button">25</button>
+                    <button id="btn26" class="assento" type="button">26</button>
+                    <button id="btn27" class="assento" type="button">27</button>
+                    <button id="btn28" class="assento" type="button">28</button>
+                    <button id="btn29" class="assento" type="button">29</button>
+                    <button id="btn30" class="assento" type="button">30</button>
+                    <button id="btn31" class="assento" type="button">31</button>
+                    <button id="btn32" class="assento" type="button">32</button>
+                    <button id="btn33" class="assento" type="button">33</button>
+                    <button id="btn34" class="assento" type="button">34</button>
+                    <button id="btn35" class="assento" type="button">35</button>
+                    <button id="btn36" class="assento" type="button">36</button>
+                    <button id="btn37" class="assento" type="button">37</button>
+                    <button id="btn38" class="assento" type="button">38</button>
+                    <button id="btn39" class="assento" type="button">39</button>
+                    <button id="btn40" class="assento" type="button">40</button>
+                    <button id="btn41" class="assento" type="button">41</button>
+                    <button id="btn42" class="assento" type="button">42</button>
+                    <button id="btn43" class="assento" type="button">43</button>
+                    <button id="btn44" class="assento" type="button">44</button>
+                    <button id="btn45" class="assento" type="button">45</button>
+                    <button id="btn46" class="assento" type="button">46</button>
+                    <button id="btn47" class="assento" type="button">47</button>
+                    <button id="btn48" class="assento" type="button">48</button>
+                    <button id="btn49" class="assento" type="button">49</button>
+                    <button id="btn50" class="assento" type="button">50</button>
+
+
+                </div>
+
+            </form>
+            <button id="btnComprar" class="btn btn-primary">Comprar</button>
+    </section>
+
+    <div id="toggle-theme-btn">
+        <img class="toggle-theme" style="width: 30px;" src="../img/DARK_MODE.png">
+    </div>
+
+    <footer>
+        <p>&#169 2025 Cinema </p>
+        <p>contato@cinema.com.br</p>
+        <p>Desenvolvido por GRRD</p>
+    </footer>
+
+    <script>
+        const toggleThemeBtn = document.querySelector('.toggle-theme');
+        const body = document.body;
+        const barraPesquisa = document.getElementById('barraPesquisa');
+        const filmes = document.querySelectorAll('.filme');
+
+        barraPesquisa.addEventListener('input', () => {
+            const termo = barraPesquisa.value.toLowerCase();
+
+            filmes.forEach(filme => {
+                const titulo = filme.querySelector('.tituloFilme').textContent.toLowerCase();
+                filme.style.display = titulo.includes(termo) ? 'block' : 'none';
+            });
+        });
+
+        const temaSalvo = localStorage.getItem('tema');
+        if (temaSalvo) {
+            body.classList.add(temaSalvo);
+        } else {
+            body.classList.add('light');
+        }
+
+        const updateImage = () => {
+            if (localStorage.getItem('tema') == 'light') {
+                toggleThemeBtn.src = '../img/DARK_MODE.png';
+            } else {
+                toggleThemeBtn.src = '../img/Light_Mode.png';
+            }
+        };
+
+        toggleThemeBtn.addEventListener('click', function () {
+            if (body.classList.contains('dark')) {
+                body.classList.remove('dark');
+                body.classList.add('light');
+                localStorage.setItem('tema', 'light');
+            } else {
+                body.classList.remove('light');
+                body.classList.add('dark');
+                localStorage.setItem('tema', 'dark');
+            }
+
+            updateImage();
+        });
+
+        updateImage();
+    </script>
+
+    <script src="../script/sessaoAtiva.js"></script>
+    <script src="../script/comprar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+:root {
+    --light-background-color: #f8f9fa;
+    --dark-background-color: #0d1117;
+    --primary-color: #0061F2;
+    --primary-color-hover: #004BBB;
+    --light-card-bg: #ffffff;
+    --dark-card-bg: #1e1e1e;
+    --light-text: #000000;
+    --dark-text: #ffffff;
+    --secondary-text-light: #555555;
+    --secondary-text-dark: #c4c4c4;
+}
+
+/* ===== Reset geral ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ===== Temas ===== */
+body.light {
+    background-color: var(--light-background-color);
+    color: var(--light-text);
+}
+
+body.dark {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text);
+}
+
+/* ===== Navbar ===== */
+nav {
+    height: 80px;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    --bs-navbar-padding-x: 4rem !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    background-color: var(--light-card-bg);
+    transition: background-color 0.3s;
+}
+
+nav .container-fluid {
+    display: flex;
+    
+}
+
+body.dark .navbar {
+    background-color: var(--dark-card-bg);
+}
+
+.navbar-brand,
+.navbar-brand img {
+    height: 80px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+body.light .navbar-nav .nav-link {
+    color: var(--light-text);
+}
+
+body.dark .navbar-nav .nav-link {
+    color: var(--dark-text);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* ===== Modal ==== */
+body.dark .modal-content{
+    color: white !important;
+    background-color: var(--dark-card-bg) !important;
+}
+
+body.dark .modal-content .btn-close{
+    color: white !important;
+    background-color: white !important;
+}
+
+
+/* ===== Botão de alternar tema ===== */
+#toggle-theme-btn {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin: 0px 10px;
+    bottom: 80px;
+    right: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-theme {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+/* ===== Lista de Filmes ===== */
+#listaFilmes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 3vh 5vw;
+    padding-bottom: 100px;
+    justify-items: center;
+}
+
+/* ===== Card de Filme ===== */
+.filme {
+    background-color: var(--light-card-bg);
+    border-radius: 10px;
+    padding: 1vw;
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.filme:hover {
+    transform: scale(1.02);
+}
+
+body.dark .filme {
+    background-color: var(--dark-card-bg);
+}
+
+.filme img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.tituloFilme {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.generoFilme {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+body.light .generoFilme {
+    color: var(--secondary-text-light);
+}
+
+body.dark .generoFilme {
+    color: var(--secondary-text-dark);
+}
+
+/* ===== Botões do Card ===== */
+.botoes {
+    display: flex;
+    gap: 8px;
+}
+
+.botoes a {
+    text-decoration: none;
+}
+
+.botaoFilme {
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botaoFilme:hover {
+    background-color: var(--primary-color-hover);
+}
+
+/* ===== Footer ===== */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light footer {
+    background-color: #f1f1f1;
+    color: var(--light-text);
+}
+
+body.dark footer {
+    background-color: #1b1b1b;
+    color: var(--dark-text);
+}
+
+

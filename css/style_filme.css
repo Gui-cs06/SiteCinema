@@ -1,0 +1,331 @@
+:root {
+    --light-background-color: #f8f9fa;
+    --dark-background-color: #0d1117;
+    --primary-color: #0061F2;
+    --primary-color-hover: #004BBB;
+    --light-card-bg: #ffffff;
+    --dark-card-bg: #1e1e1e;
+    --light-text: #000000;
+    --dark-text: #ffffff;
+    --secondary-text-light: #555555;
+    --secondary-text-dark: #c4c4c4;
+    --hover-light: #e9ecef;
+    --hover-dark: #2d333b;
+    --selected-color: #0061F2;
+    --selected-text: #ffffff;
+    --disabled-color: #6c757d;
+}
+
+/* ===== Reset geral ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    height: 100%;
+}
+
+/* ===== Temas ===== */
+body.light {
+    background-color: var(--light-background-color);
+    color: var(--light-text);
+}
+
+body.dark {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text);
+}
+
+/* ===== Layout Principal ===== */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== Modal ==== */
+body.dark .modal-content{
+    color: white !important;
+    background-color: var(--dark-card-bg) !important;
+}
+
+body.dark .modal-content .btn-close{
+    color: white !important;
+    background-color: white !important;
+}
+
+/* ===== Navbar ===== */
+nav {
+    height: 80px;
+    padding: 0 20px;
+    flex-shrink: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    --bs-navbar-padding-x: 4rem !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    background-color: var(--light-card-bg);
+    transition: background-color 0.3s;
+}
+
+body.dark .navbar {
+    background-color: var(--dark-card-bg);
+}
+
+.navbar-brand,
+.navbar-brand img {
+    height: 80px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+body.light .navbar-nav .nav-link {
+    color: var(--light-text);
+}
+
+body.dark .navbar-nav .nav-link {
+    color: var(--dark-text);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* ===== Conteúdo Principal ===== */
+section {
+    margin: 1vw;
+    padding: 1vh 1vw;
+    border: solid .2vw gray;
+    border-radius: 1vw;
+    transition: background-color 0.3s, color 0.3s;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+body.light section {
+    background-color: var(--light-card-bg);
+    color: var(--light-text);
+}
+
+body.dark section {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+}
+
+section #generoEDuracao, section #nomeFilme {
+    margin: 0;
+}
+
+section hr {
+    margin: 1vh 0;
+    border-color: var(--secondary-text-light);
+}
+
+body.dark section hr {
+    border-color: var(--secondary-text-dark);
+}
+
+/* ===== Container do Filme ===== */
+#divFilme {
+    display: flex;
+    gap: 2rem;
+    flex-grow: 1;
+    min-height: 0;
+    min-height: calc(100vh - 200px); /* Ajuste conforme necessário */
+}
+
+/* ===== Seção da Imagem ===== */
+#divImagem {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#imgFilme {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#divBotoes {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#divBotoes .btn {
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    border-radius: 0.8rem;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+/* ===== Seção de Horários ===== */
+#divHorario {
+    width: 20%;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    transition: background-color 0.3s;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+body.light #divHorario {
+    background-color: #e0e0e0;
+    border: none;
+}
+
+body.dark #divHorario {
+    background-color: var(--hover-dark);
+}
+
+.sessao {
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+body.light .sessao {
+    background-color: var(--light-background-color);
+    color: var(--light-text);
+    border: 1px solid var(--secondary-text-light);
+}
+
+body.dark .sessao {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+    border: 1px solid var(--secondary-text-dark);
+}
+
+body.light .sessao:hover {
+    background-color: var(--hover-light);
+}
+
+body.dark .sessao:hover {
+    background-color: var(--hover-dark);
+}
+
+.sessao.ativo {
+    background-color: var(--selected-color) !important;
+    color: var(--selected-text) !important;
+    border-color: var(--selected-color) !important;
+}
+
+/* ===== Seção de Descrição ===== */
+#divDescricao {
+    width: 55%;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    transition: background-color 0.3s;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+body.light #divDescricao {
+    background-color: #e0e0e0;
+    border: none;
+}
+
+body.dark #divDescricao {
+    background-color: var(--hover-dark);
+}
+
+.titulo {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.informacao {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-text-light);
+}
+
+body.dark .informacao {
+    color: var(--secondary-text-dark);
+}
+
+/* ===== Footer ===== */
+footer {
+    padding: 1rem 0;
+    transition: background-color 0.3s, color 0.3s;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+body.light footer {
+    background-color: var(--light-card-bg);
+    color: var(--light-text);
+    border-top: 1px solid var(--secondary-text-light);
+}
+
+body.dark footer {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+    border-top: 1px solid var(--secondary-text-dark);
+}
+
+/* ===== Botão de alternar tema ===== */
+#toggle-theme-btn {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin: 0px 10px;
+    bottom: 80px;
+    right: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+#toggle-theme-btn:hover {
+    background-color: var(--primary-color-hover);
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 1200px) {
+    #divFilme {
+        flex-direction: column;
+    }
+    
+    #divImagem, #divHorario, #divDescricao {
+        width: 100%;
+    }
+    
+    #imgFilme {
+        max-height: 300px;
+    }
+    
+    #divBotoes {
+        flex-direction: column;
+    }
+}

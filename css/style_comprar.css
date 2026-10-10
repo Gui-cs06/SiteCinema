@@ -1,0 +1,331 @@
+:root {
+    --light-background-color: #f8f9fa;
+    --dark-background-color: #0d1117;
+    --primary-color: #0061F2;
+    --primary-color-hover: #004BBB;
+    --light-card-bg: #ffffff;
+    --dark-card-bg: #1e1e1e;
+    --light-text: #000000;
+    --dark-text: #ffffff;
+    --secondary-text-light: #555555;
+    --secondary-text-dark: #c4c4c4;
+    --hover-light: #e9ecef;
+    --hover-dark: #2d333b;
+    --selected-color: #0061F2;
+    --selected-text: #ffffff;
+    --disabled-color: #6c757d;
+}
+
+/* ===== Reset geral ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ===== Temas ===== */
+body.light {
+    background-color: var(--light-background-color);
+    color: var(--light-text);
+}
+
+body.dark {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text);
+}
+
+/* ===== Navbar ===== */
+nav {
+    height: 80px;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    --bs-navbar-padding-x: 4rem !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    background-color: var(--light-card-bg);
+    transition: background-color 0.3s;
+}
+
+body.dark .navbar {
+    background-color: var(--dark-card-bg);
+}
+
+.navbar-brand,
+.navbar-brand img {
+    height: 80px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+body.light .navbar-nav .nav-link {
+    color: var(--light-text);
+}
+
+body.dark .navbar-nav .nav-link {
+    color: var(--dark-text);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* ===== Botão de alternar tema ===== */
+#toggle-theme-btn {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin: 0px 10px;
+    bottom: 80px;
+    right: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggle-theme-btn:hover {
+    background-color: var(--primary-color-hover);
+}
+
+/* ===== Section ===== */
+section {
+    margin: 1vw;
+    padding: 1vh 1vw;
+    min-height: 77vh;
+    border: solid .2vw gray;
+    border-radius: 1vw;
+    transition: background-color 0.3s, color 0.3s;
+    overflow-y: auto;
+}
+
+body.light section {
+    background-color: var(--light-card-bg);
+    color: var(--light-text);
+}
+
+body.dark section {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+}
+
+section #generoEDuracao, section #nomeFilme {
+    margin: 0;
+}
+
+section hr {
+    margin: 1vh 0;
+    border-color: var(--secondary-text-light);
+}
+
+body.dark section hr {
+    border-color: var(--secondary-text-dark);
+}
+
+/* ===== Div do Filme ===== */
+section #divFilme {
+    display: flex;
+    align-items: center;
+}
+
+/* ===== Div Imagem do Filme ===== */
+#divImagem {
+    height: 65vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imgFilme { 
+    width: 20vw; 
+    height: 64vh;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ===== Formulário ===== */
+#formCompra {
+    margin: 0 0 0 15vw;
+    height: 65vh;
+    width: 40vw;
+}
+
+/* ===== Botões de Sessão ===== */
+.sessao {
+    margin: 1vh 0.5vw;
+    padding: 0.8vh 1.2vw;
+    border: none;
+    border-radius: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+body.light .sessao {
+    background-color: var(--light-background-color);
+    color: var(--light-text);
+    border: 1px solid var(--secondary-text-light);
+}
+
+body.dark .sessao {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+    border: 1px solid var(--secondary-text-dark);
+}
+
+body.light .sessao:hover {
+    background-color: var(--hover-light);
+}
+
+body.dark .sessao:hover {
+    background-color: var(--hover-dark);
+}
+
+.sessao.ativo {
+    background-color: var(--selected-color) !important;
+    color: var(--selected-text) !important;
+    border-color: var(--selected-color) !important;
+}
+
+/* ===== Input Número de Ingressos ===== */
+#numIngressos {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--secondary-text-light);
+    margin: 0.5rem 0;
+    width: 80px;
+    text-align: center;
+}
+
+body.dark #numIngressos {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+    border-color: var(--secondary-text-dark);
+}
+
+/* ===== Grid de Assentos ===== */
+.grid-assentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.assento {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    font-weight: 500;
+}
+
+body.light .assento {
+    background-color: var(--light-background-color);
+    color: var(--light-text);
+    border: 1px solid var(--secondary-text-light);
+}
+
+body.dark .assento {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+    border: 1px solid var(--secondary-text-dark);
+}
+
+body.light .assento:hover:not(.ocupado):not(.selecionado) {
+    background-color: var(--hover-light);
+}
+
+body.dark .assento:hover:not(.ocupado):not(.selecionado) {
+    background-color: var(--hover-dark);
+}
+
+.assento.selecionado {
+    background-color: var(--selected-color) !important;
+    color: var(--selected-text) !important;
+    border-color: var(--selected-color) !important;
+}
+
+.assento.ocupado {
+    background-color: var(--disabled-color) !important;
+    color: white !important;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* ===== Botão Comprar ===== */
+#btnComprar {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 0.8rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+}
+
+#btnComprar:hover {
+    background-color: var(--primary-color-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Footer ===== */
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 6vh;
+    width: 100vw;
+    padding: 1rem 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light footer {
+    background-color: var(--light-card-bg);
+    color: var(--light-text);
+    border-top: 1px solid var(--secondary-text-light);
+}
+
+body.dark footer {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+    border-top: 1px solid var(--secondary-text-dark);
+}
+
+/* ===== Títulos e Informações ===== */
+.titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.informacao {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: var(--secondary-text-light);
+}
+
+body.dark .informacao {
+    color: var(--secondary-text-dark);
+}
